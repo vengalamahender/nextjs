@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Mahe Blog | <%= title %></title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/styles.css">
+<style>
+
+</style>
+<script src=""></script>
+<body>
+
+<!-- <img src="img_la.jpg" alt="LA" style="width:100%"> -->
+<%- include('./partials/nav.ejs') %>
+<div class="">
+ <h1>All Blogs</h1>
+    <% if(blogs.length > 0) { %>
+        <% blogs.map(blog => { %>
+            
+            <h3><%= blog.title %></h3>
+            <p><%= blog.snippet %></p>
+           
+        <% }) %>
+
+    <% } else { %>
+            <p>There are no blogs to display...</p>
+    <% } %>
+ 
+
+    
+</div>
+
+</body>
+</html>
